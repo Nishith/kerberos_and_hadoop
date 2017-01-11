@@ -112,7 +112,7 @@ than a dotted network address. Examples: `ENTERPRISE`, `HCLUSTER`
 Kerberos allows different realms to have some form of trust of others. This would allow
 a Hadoop cluster with its own KDC and realm to trust the `ENTERPRISE` realm, but for the
 enterprise realm to not trust the HCLUSTER realm, and hence all its principals. This would
-preventing a principal `hdfs/node1@HCLUSTER` from having access to the `ENTERPRISE` systems.
+prevent a principal `hdfs/node1@HCLUSTER` from having access to the `ENTERPRISE` systems.
 While this is a bit tricky to set up, it means that keytabs created for the Hadoop cluster
 (see below) are only a security risk for the Hadoop cluster and all data kept in/processed
 by it, rather than the entire organisation.
@@ -207,7 +207,7 @@ To look at and work with keytabs, the `ktutil` command line program is the tool 
 
 Kerberos is built around the notion of *tickets*.
 
-A ticket is something which can be passed to a server to identify that the caller
+A ticket is something which can be passed to a server to identify the caller
 and to provide a secret key that can be used between the client an the server 
 —for the duration of the ticket's lifetime. It is all that a server needs to
 authenticate a client: there's no need for the server to talk to the KDC.
